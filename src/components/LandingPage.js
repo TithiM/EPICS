@@ -1,24 +1,47 @@
 // src/components/LandingPage.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+
+const LoginForm = () => (
+  <div>
+    <h2>Login Form</h2>
+    {/* Your login form fields and logic go here */}
+  </div>
+);
+
+const SignUpForm = () => (
+  <div>
+    <h2>Sign Up Form</h2>
+    {/* Your signup form fields and logic go here */}
+  </div>
+);
 
 const LandingPage = () => {
-  // Check user authentication status (you can implement your logic here)
-  const isAuthenticated = false; // Replace with your authentication logic
+  const history = useHistory();
+
+  const handleLoginClick = () => {
+    history.push('/login');
+  };
+
+  const handleSignUpClick = () => {
+    history.push('/signup');
+  };
 
   return (
-    <div>
-      <h2>Landing Page</h2>
-      {isAuthenticated ? (
-        <p>Welcome! You are already logged in.</p>
-      ) : (
-        <div>
-          <p>Not logged in? Choose an option:</p>
-          <Link to="/login">Login</Link> | <Link to="/signup">Sign Up</Link>
-        </div>
-      )}
+    <div className="container text-center mt-5">
+      <h2>Welcome to AgroTechHub</h2>
+      <p>Explore the world of agriculture technology.</p>
+      <div className="my-3">
+        <button className="btn btn-primary mx-2" onClick={handleLoginClick}>
+          Login
+        </button>
+        <button className="btn btn-link" onClick={handleSignUpClick}>
+          Sign Up
+        </button>
+      </div>
     </div>
   );
 };
 
 export default LandingPage;
+

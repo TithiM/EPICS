@@ -12,3 +12,11 @@
 .custom-btn {
   margin-right: 8px; /* Adjust the margin size as needed */
 }
+
+.navbar-transparent {
+  background-color: rgba(111, 80, 80, 0.8); /* Adjust the alpha value for transparency */
+}
+
+.navbar-transparent .navbar-brand {
+  margin-right: auto; /* Move "AgroTechHub" to the left */
+}
