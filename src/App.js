@@ -22,7 +22,7 @@ const Header = () => (
     <Container>
       <Navbar.Brand href="/" className="mr-auto">AgroTechHub</Navbar.Brand>
       <Nav>
-        <Nav.Link href="/login">Login</Nav.Link>
+        <Nav.Link href="/login">Logout</Nav.Link>
         {/* Add more nav links as needed */}
       </Nav>
     </Container>
